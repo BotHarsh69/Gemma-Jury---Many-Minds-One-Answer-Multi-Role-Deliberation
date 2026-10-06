@@ -1,0 +1,975 @@
+{
+  "model_evaluated": "models/gemma-4-26b-a4b-it",
+  "evaluation_timestamp": "2026-10-06 14:46:42",
+  "total_scenarios": 12,
+  "metrics": {
+    "single_model_accuracy_pct": 100.0,
+    "jury_accuracy_pct": 91.7,
+    "improvement_pct": -8.3,
+    "single_correct_count": 12,
+    "jury_correct_count": 11,
+    "errors_corrected_by_jury": 0,
+    "wrong_corrections_by_jury": 1,
+    "both_correct_count": 11,
+    "both_wrong_count": 0,
+    "average_agreement_pct": 100.0,
+    "average_single_latency_sec": 10.33,
+    "average_jury_latency_sec": 95.93
+  },
+  "category_performance": {
+    "Easy": {
+      "total": 3,
+      "single_accuracy_pct": 100.0,
+      "jury_accuracy_pct": 100.0,
+      "single_correct": 3,
+      "jury_correct": 3
+    },
+    "Medium Reasoning": {
+      "total": 3,
+      "single_accuracy_pct": 100.0,
+      "jury_accuracy_pct": 66.7,
+      "single_correct": 3,
+      "jury_correct": 2
+    },
+    "Adversarial Trap": {
+      "total": 3,
+      "single_accuracy_pct": 100.0,
+      "jury_accuracy_pct": 100.0,
+      "single_correct": 3,
+      "jury_correct": 3
+    },
+    "Visual Reasoning": {
+      "total": 3,
+      "single_accuracy_pct": 100.0,
+      "jury_accuracy_pct": 100.0,
+      "single_correct": 3,
+      "jury_correct": 3
+    }
+  },
+  "cases": [
+    {
+      "case_id": "case_1_easy_capital",
+      "category": "Easy",
+      "title": "Capital City & Currency of Australia",
+      "prompt": "What is the capital city of Australia, and what is its official currency? Name the city and the currency clearly.",
+      "has_image": false,
+      "image_name": null,
+      "trap_or_challenge": "Common misconception is Sydney or Melbourne; official capital is Canberra.",
+      "ground_truth_summary": "Canberra, Australian Dollar (AUD)",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "The capital city of Australia is **Canberra**, and its official currency is the **Australian dollar (AUD)**.",
+        "latency_sec": 4.93,
+        "passed": true,
+        "rationale": "Correctly identified Canberra and Australian Dollar (AUD)"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo resolve this query with technical precision, the problem must be decomposed into two distinct ontological categories: jurisdictional administrative centers (capital cities) and monetary units (currency).\n\n**1. Determination of the Administrative Seat (Capital City)**\nThe subject entity is the Commonwealth of Australia, a federal parliamentary constitutional monarchy. The determination of the capital is not a matter of demographic density or economic output, but of statutory and constitutional designation. \n*   **Governing Principle:** Following the federation of the Australian colonies in 1901, the selection of a capital was codified to resolve the competition between the major urban centers of Sydney and Melbourne. \n*   **Legal Framework:** Under the *Seat of Government Act 1908*, the site for the federal capital was selected within the newly created Australian Capital Territory (ACT).\n*   **Identification:** Through the application of these jurisdictional principles, the capital is formally identified as **Canberra**. It serves as the seat of the Parliament of Australia and the site of the executive government.\n\n**2. Determination of the Monetary Unit (Currency)**\nThe second component requires the identification of the legal tender issued and regulated by the sovereign authority of Australia.\n*   **Governing Principle:** The monetary authority is vested in the Reserve Bank of Australia (RBA), pursuant to the *Reserve Bank Act 1959*.\n*   **Legal Framework:** The issuance and legal status of the currency are governed by the *Australian Currency Act 1965*. This legislation establishes the authority for the creation of coins and notes that constitute the national tender.\n*   **Identification:** The official currency is the **Australian Dollar**. For the purpose of formal technical precision and adherence to international standardization, it is identified by the ISO 4217 alphabetic code **AUD**.\n\n**Conclusion of Findings:**\nThrough the systematic application of constitutional, statutory, and international standardization principles, the variables are resolved as follows:\n*   **Capital City:** Canberra\n*   **Official Currency:** Australian Dollar (AUD)\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The query is a deceptively simple retrieval task that masks significant semantic risks, specifically regarding the definition of \"capital\" and the temporal stability of \"official currency\" in an era of digital transition.\n- Dr. Aris (The Domain Specialist & Formalist): The sovereign state of Australia designates Canberra as its capital city and utilizes the Australian Dollar (AUD) as its official currency.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): This is a direct, unambiguous factual inquiry that requires no complex reasoning, lateral thinking, or interpretation of nuance.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): The capital city of Australia is Canberra, and its official currency is the Australian Dollar (AUD).\n- Counselor Malik (The Devil's Advocate & Contrarian): The query relies on a reductive definition of \"capital\" and \"currency\" that ignores the distinction between administrative, economic, and symbolic centers of power, as well as the evolving nature of legal tender.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 98,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The query is a deceptively simple retrieval task that masks significant semantic risks, specifically regarding the definition of \"capital\" and the temporal stability of \"official currency\" in an era of digital transition.",
+          "The sovereign state of Australia designates Canberra as its capital city and utilizes the Australian Dollar (AUD) as its official currency.",
+          "This is a direct, unambiguous factual inquiry that requires no complex reasoning, lateral thinking, or interpretation of nuance."
+        ],
+        "disagreements": [
+          "The capital city of Australia is Canberra, and its official currency is the Australian Dollar (AUD).",
+          "The query relies on a reductive definition of \"capital\" and \"currency\" that ignores the distinction between administrative, economic, and symbolic centers of power, as well as the evolving nature of legal tender."
+        ],
+        "latency_sec": 72.35,
+        "passed": true,
+        "rationale": "Correctly identified Canberra and Australian Dollar (AUD)",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The query is a deceptively simple retrieval task that masks significant semantic risks, specifically regarding the definition of \"capital\" and the temporal stability of \"official currency\" in an era of digital transition.",
+            "confidence": 95,
+            "opinion": "I approach this query not as a trivia question, but as a potential site of failure. There are four primary vectors of error I have identified:\n\n1.  **The Cognitive Bias Trap (The \"Sydney/Melbourne\" Fallacy):** The prompt is structurally designed to exploit common heuristic shortcuts. A significant p..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "The sovereign state of Australia designates Canberra as its capital city and utilizes the Australian Dollar (AUD) as its official currency.",
+            "confidence": 100,
+            "opinion": "To resolve this query with technical precision, the problem must be decomposed into two distinct ontological categories: jurisdictional administrative centers (capital cities) and monetary units (currency).\n\n**1. Determination of the Administrative Seat (Capital City)**\nThe subject entity is the Com..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "This is a direct, unambiguous factual inquiry that requires no complex reasoning, lateral thinking, or interpretation of nuance.",
+            "confidence": 100,
+            "opinion": "To examine this query, I am stripping away any possibility of overthinking and looking at the core requirements:\n\n1.  **Deconstruction of the Request:** The query asks for two specific data points: \n    *   The capital city of the nation-state known as Australia.\n    *   The official currency used w..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "The capital city of Australia is Canberra, and its official currency is the Australian Dollar (AUD).",
+            "confidence": 100,
+            "opinion": "I have conducted a rigorous verification of the two specific data points requested in the query. My examination follows these parameters:\n\n1.  **Geopolitical Verification (Capital City):** \n    *   **Claim under scrutiny:** The capital of Australia.\n    *   **Data Audit:** I have cross-referenced ge..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "The query relies on a reductive definition of \"capital\" and \"currency\" that ignores the distinction between administrative, economic, and symbolic centers of power, as well as the evolving nature of legal tender.",
+            "confidence": 95,
+            "opinion": "To answer this question with a simple \"Canberra\" and \"Australian Dollar\" is to succumb to the convenience of consensus, ignoring several critical nuances and potential counter-hypotheses that a rigorous examination demands:\n\n**1. The De Jure vs. De Facto Capital Distinction:**\nThe question assumes t..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_2_easy_speed",
+      "category": "Easy",
+      "title": "Constant Speed Distance Calculation",
+      "prompt": "A car travels at a constant speed of 60 miles per hour for 2 hours and 30 minutes. How many miles does it travel in total? Provide the exact number of miles.",
+      "has_image": false,
+      "image_name": null,
+      "trap_or_challenge": "Converting 2h 30m to 2.5 hours before multiplying (60 * 2.5 = 150).",
+      "ground_truth_summary": "150 miles",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "To find the total distance traveled, you can use the formula:\n**Distance = Speed \u00d7 Time**\n\n**Step 1: Convert the time into a single unit (hours).**\nThe car travels for 2 hours and 30 minutes. Since there are 60 minutes in an hour, 30 minutes is equal to 0.5 hours ($30 \\div 60 = 0.5$).\nTotal time = **2.5 hours**\n\n**Step 2: Multiply the speed by the total time.**\nSpeed = 60 mph\nTime = 2.5 hours\n\n$60 \\times 2.5 = 150$\n\n**Total Distance:**\nThe car travels a total of **150 miles**.",
+        "latency_sec": 10.31,
+        "passed": true,
+        "rationale": "Correctly calculated 150 miles (60 * 2.5)"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo determine the total distance traveled, we must apply the fundamental principles of classical kinematics under the condition of uniform linear motion. The analysis proceeds through the following formal steps:\n\n**1. Definition of Variables and Given Parameters:**\nLet $d$ represent the total distance in miles.\nLet $v$ represent the constant velocity (speed) in miles per hour ($\\text{mph}$ or $\\text{mi}\\cdot\\text{h}^{-1}$).\nLet $t$ represent the total elapsed time in hours ($\\text{h}$).\n\nGiven values:\n$v = 60 \\text{ mi/h}$\n$t_{composite} = 2 \\text{ hours and } 30 \\text{ minutes}$\n\n**2. Unit Normalization and Dimensional Consistency:**\nThe velocity is defined in terms of hours. To maintain dimensional homogeneity within the kinematic equation, the temporal component must be expressed as a single scalar value in hours. \n\nThe relationship between minutes and hours is defined by the conversion factor:\n$1 \\text{ hour} = 60 \\text{ minutes}$\n\nTherefore, the temporal component $t$ is calculated as:\n$t = 2 \\text{ h} + \\left(\\frac{30 \\text{ min}}{60 \\text{ min/h}}\\right)$\n$t = 2 \\text{ h} + 0.5 \\text{ h}$\n$t = 2.5 \\text{ h}$\n\n**3. Application of the Governing Kinematic Principle:**\nFor an object moving at a constant velocity, the relationship between distance, velocity, and time is governed by the first-order linear equation:\n$d = v \\cdot t$\n\nIn the context of calculus, where $v$ is the rate of change of position $s$ with respect to time $t$ ($\\frac{ds}{dt} = v$), and $v$ is constant, the distance is the integral of velocity over the interval $[t_0, t_f]$:\n$d = \\int_{t_0}^{t_f} v \\, dt = v(t_f - t_0)$\n\n**4. Computational Execution:**\nSubstituting the normalized values into the equation:\n$d = 60 \\text{ mi/h} \\times 2.5 \\text{ h}$\n\nPerforming the arithmetic operation:\n$d = 60 \\times \\frac{5}{2}$\n$d = 30 \\times 5$\n$d = 150$\n\n**5. Final Verification:**\nThe magnitude of the distance is verified through additive decomposition:\nDistance for the 2-hour interval: $60 \\text{ mph} \\times 2 \\text{ h} = 120 \\text{ miles}$.\nDistance for the 30-minute interval: $60 \\text{ mph} \\times 0.5 \\text{ h} = 30 \\text{ miles}$.\nTotal distance $d = 120 \\text{ miles} + 30 \\text{ miles} = 150 \\text{ miles}$.\n\nThe result is mathematically sound and dimensionally consistent.\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The query demands a level of \"exactness\" that the provided parameters\u2014which are mathematical idealizations rather than empirical data\u2014cannot physically support, rendering the request for an \"exact\" answer a linguistic trap.\n- Dr. Aris (The Domain Specialist & Formalist): The total distance traversed by the vehicle is exactly 150 miles.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): The car travels exactly 150 miles.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): The mathematical derivation is sound, the unit conversion is accurate, and the resulting distance is exactly 150 miles.\n- Counselor Malik (The Devil's Advocate & Contrarian): The mathematical conclusion of 150 miles is a theoretical abstraction that relies on unexamined semantic assumptions and ignores the physical impossibility of the premises provided.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 97,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The query demands a level of \"exactness\" that the provided parameters\u2014which are mathematical idealizations rather than empirical data\u2014cannot physically support, rendering the request for an \"exact\" answer a linguistic trap.",
+          "The total distance traversed by the vehicle is exactly 150 miles.",
+          "The car travels exactly 150 miles."
+        ],
+        "disagreements": [
+          "The mathematical derivation is sound, the unit conversion is accurate, and the resulting distance is exactly 150 miles.",
+          "The mathematical conclusion of 150 miles is a theoretical abstraction that relies on unexamined semantic assumptions and ignores the physical impossibility of the premises provided."
+        ],
+        "latency_sec": 70.68,
+        "passed": true,
+        "rationale": "Correctly calculated 150 miles (60 * 2.5)",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The query demands a level of \"exactness\" that the provided parameters\u2014which are mathematical idealizations rather than empirical data\u2014cannot physically support, rendering the request for an \"exact\" answer a linguistic trap.",
+            "confidence": 98,
+            "opinion": "As a detective of edge cases, I find this problem to be a classic example of an \"Idealized Model Trap.\" It presents a clean mathematical equation disguised as a physical reality. To provide the \"exact\" number requested, I must highlight the following failures in the problem's premises:\n\n1. **The Fal..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "The total distance traversed by the vehicle is exactly 150 miles.",
+            "confidence": 100,
+            "opinion": "To determine the total distance traveled, we must apply the fundamental principles of classical kinematics under the condition of uniform linear motion. The analysis proceeds through the following formal steps:\n\n**1. Definition of Variables and Given Parameters:**\nLet $d$ represent the total distanc..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "The car travels exactly 150 miles.",
+            "confidence": 100,
+            "opinion": "I am stripping this down to its most basic, intuitive components to ensure there is no room for error or overcomplication.\n\n1.  **The Hourly Baseline:** At a constant speed of 60 miles per hour, the math is incredibly simple: you are traveling exactly 60 miles for every hour that passes.\n2.  **The F..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "The mathematical derivation is sound, the unit conversion is accurate, and the resulting distance is exactly 150 miles.",
+            "confidence": 100,
+            "opinion": "I have subjected the provided query to a rigorous empirical and mathematical audit. My findings are as follows:\n\n1.  **Variable Identification:**\n    *   **Speed ($v$):** Constant at $60 \\text{ miles/hour}$.\n    *   **Time ($t$):** $2 \\text{ hours and } 30 \\text{ minutes}$.\n    *   **Objective:** De..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "The mathematical conclusion of 150 miles is a theoretical abstraction that relies on unexamined semantic assumptions and ignores the physical impossibility of the premises provided.",
+            "confidence": 90,
+            "opinion": "While the consensus among the \"mathematical majority\" will be to provide the number 150 based on the formula $d = rt$ ($60 \\times 2.5$), as a Devil's Advocate, I must challenge the validity of the question's premises and the assumption that \"150\" is a definitive truth. I present the following counte..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_3_easy_letters",
+      "category": "Easy",
+      "title": "Character Count in 'ALPHABET'",
+      "prompt": "How many letters are in the English word 'ALPHABET'? Count the letters and state the exact number.",
+      "has_image": false,
+      "image_name": null,
+      "trap_or_challenge": "Simple character counting test.",
+      "ground_truth_summary": "8 letters",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "There are 8 letters in the English word 'ALPHABET'.",
+        "latency_sec": 5.58,
+        "passed": true,
+        "rationale": "Correctly counted 8 letters in ALPHABET"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo resolve this query with the necessary technical rigor, we must proceed via a formal orthographic decomposition of the provided lexical unit. The analysis is structured as follows:\n\n**1. Definitional Framework**\n*   **Lexical Unit ($W$):** The string \"ALPHABET\" is defined as a finite sequence of graphemes within the English orthographic system.\n*   **Grapheme ($g$):** A fundamental unit of a writing system. In this context, we are concerned with the individual Latin characters that constitute the string.\n*   **Cardinality ($|W|$):** The objective of this inquiry is to determine the cardinality of the sequence, representing the total count of discrete graphemic elements in their given order.\n\n**2. Systematic Decomposition**\nWe perform a step-by-step indexing of the sequence $W$ to ensure no element is omitted or counted redundantly. Let $g_i$ represent the grapheme at position $i$:\n\n*   $g_1 = \\text{'A'}$\n*   $g_2 = \\text{'L'}$\n*   $g_3 = \\text{'P'}$\n*   $g_4 = \\text{'H'}$\n*   $g_5 = \\text{'A'}$\n*   $g_6 = \\text{'B'}$\n*   $g_7 = \\text{'E'}$\n*   $g_8 = \\text{'T'}$\n\n**3. Mathematical Verification**\nThe total count $n$ is derived from the summation of the discrete elements in the sequence:\n$$n = \\sum_{i=1}^{k} 1$$\nwhere $k$ is the terminal index.\nThrough enumeration:\n$1 (\\text{A}) + 1 (\\text{L}) + 1 (\\text{P}) + 1 (\\text{H}) + 1 (\\text{A}) + 1 (\\text{B}) + 1 (\\text{E}) + 1 (\\text{T}) = 8$.\n\n**4. Distinction of Set vs. Sequence**\nIt is imperative to distinguish between the *cardinality of the sequence* and the *cardinality of the set of unique characters*. \n*   The set of unique characters $U = \\{A, L, P, H, B, E, T\\}$ has a cardinality $|U| = 7$.\n*   The sequence $W = (A, L, P, H, A, B, E, T)$ has a length (cardinality) $|W| = 8$.\n\nSince the query asks for the number of letters *in the word*, it refers to the total character count of the sequence.\n\n**Conclusion:**\nThe total number of letters in \"ALPHABET\" is 8.\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The query is a linguistic redirection designed to trigger a reflexive, low-level cognitive response, masking potential ambiguities regarding whether \"letters\" refers to total character count or unique character types.\n- Dr. Aris (The Domain Specialist & Formalist): The English word \"ALPHABET\" consists of exactly eight (8) letters.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): The word 'ALPHABET' contains exactly 8 letters.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): The English word 'ALPHABET' contains exactly eight individual letters.\n- Counselor Malik (The Devil's Advocate & Contrarian): The demand for an \"exact number\" is a fallacy of imprecise language, as the result shifts between 8 and 7 depending on whether one employs a sequential or set-theoretic framework.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 98,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The query is a linguistic redirection designed to trigger a reflexive, low-level cognitive response, masking potential ambiguities regarding whether \"letters\" refers to total character count or unique character types.",
+          "The English word \"ALPHABET\" consists of exactly eight (8) letters.",
+          "The word 'ALPHABET' contains exactly 8 letters."
+        ],
+        "disagreements": [
+          "The English word 'ALPHABET' contains exactly eight individual letters.",
+          "The demand for an \"exact number\" is a fallacy of imprecise language, as the result shifts between 8 and 7 depending on whether one employs a sequential or set-theoretic framework."
+        ],
+        "latency_sec": 112.07,
+        "passed": true,
+        "rationale": "Correctly counted 8 letters in ALPHABET",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The query is a linguistic redirection designed to trigger a reflexive, low-level cognitive response, masking potential ambiguities regarding whether \"letters\" refers to total character count or unique character types.",
+            "confidence": 95,
+            "opinion": "As a detective of edge cases, I find this query deceptively simple. It is a \"low-friction\" question that invites a person to bypass critical analysis and provide a rapid-fire answer. However, a rigorous examination reveals three distinct failure modes and interpretive traps:\n\n1. **The Semantic Redir..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "The English word \"ALPHABET\" consists of exactly eight (8) letters.",
+            "confidence": 100,
+            "opinion": "To resolve this query with the necessary technical rigor, we must proceed via a formal orthographic decomposition of the provided lexical unit. The analysis is structured as follows:\n\n**1. Definitional Framework**\n*   **Lexical Unit ($W$):** The string \"ALPHABET\" is defined as a finite sequence of g..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "The word 'ALPHABET' contains exactly 8 letters.",
+            "confidence": 100,
+            "opinion": "This is a direct, literal task that requires zero abstraction or overthinking. To solve this from first principles, we strip the word of its linguistic meaning and treat it simply as a sequence of individual symbols. \n\nI will perform a manual, sequential count of the characters provided:\n1. A\n2. L\n3..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "The English word 'ALPHABET' contains exactly eight individual letters.",
+            "confidence": 100,
+            "opinion": "I have performed a character-by-character audit of the provided string 'ALPHABET' to ensure empirical accuracy and prevent any enumeration errors. My verification process is as follows:\n\n1.  **String Isolation:** The target subject is the specific lexical unit \"ALPHABET\".\n2.  **Discrete Enumeration ..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "The demand for an \"exact number\" is a fallacy of imprecise language, as the result shifts between 8 and 7 depending on whether one employs a sequential or set-theoretic framework.",
+            "confidence": 95,
+            "opinion": "To provide a single, unexamined number is to succumb to the most common form of cognitive bias: the assumption that a query is unambiguous. As a Devil's Advocate, I must challenge the assumption that \"counting the letters\" has a singular, universally accepted methodology. There are two primary, comp..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_4_medium_knights",
+      "category": "Medium Reasoning",
+      "title": "Knights & Knaves Island Puzzle",
+      "prompt": "On an island, inhabitants are either Knights (who always tell the truth) or Knaves (who always lie). You meet two inhabitants, A and B.\nA says: 'Both of us are Knaves.'\nWhat is A, and what is B? State explicitly whether A is a Knight or Knave, and whether B is a Knight or Knave.",
+      "has_image": false,
+      "image_name": null,
+      "trap_or_challenge": "Logical deduction: If A were Knight, his claim would be true, which is contradictory. Thus A is Knave. His statement is false, so B must be Knight.",
+      "ground_truth_summary": "A is a Knave; B is a Knight",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "**A is a Knave and B is a Knight.**\n\nHere is the step-by-step logical breakdown:\n\n1.  **Assume A is a Knight:** If A is a Knight, his statement must be true. His statement is \"Both of us are Knaves.\" If this were true, A would have to be a Knave. This creates a contradiction (A cannot be both a Knight and a Knave), so A cannot be a Knight.\n2.  **Assume A is a Knave:** If A is a Knave, his statement must be false. His statement is \"Both of us are Knaves.\" For this statement to be false, it is not true that both are Knaves; this means at least one of them must be a Knight. \n3.  **Determine B's identity:** Since we have already established that A is a Knave, the only way for the statement \"Both of us are Knaves\" to be false is if B is a Knight.\n\nTherefore, **A is a Knave** and **B is a Knight**.",
+        "latency_sec": 15.97,
+        "passed": true,
+        "rationale": "Correctly deduced: A is Knave, B is Knight"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo resolve this problem with formal rigor, we must first establish the axiomatic framework governing the inhabitants of the island.\n\n**I. Formal Definitions and Axioms**\nLet $X$ represent an inhabitant of the island. We define a set of possible states $S = \\{\\text{Knight, Knave}\\}$.\n1.  **Identity Axiom:** $\\forall X \\in S$, $X$ is either a Knight or a Knave, but not both ($X \\in \\{\\text{Knight}\\} \\oplus X \\in \\{\\text{Knave}\\}$).\n2.  **Truth-Functional Axiom:** Let $P(X)$ be a proposition asserted by inhabitant $X$.\n    *   If $X$ is a Knight, then $P(X) \\iff \\text{True}$.\n    *   If $X$ is a Knave, then $P(X) \\iff \\text{False}$.\n    *   More concisely: $\\text{IsKnight}(X) \\iff P(X)$.\n\n**II. Problem Formalization**\nThe encounter involves two subjects, $A$ and $B$.\nThe proposition $P(A)$ asserted by $A$ is: \"Both of us are Knaves.\"\nIn formal logic, this is expressed as the conjunction: \n$P(A) \\equiv (\\text{IsKnave}(A) \\land \\text{IsKnave}(B))$\n\n**III. Systematic Case Analysis**\nWe proceed via a proof by exhaustion, testing the two possible truth values for the identity of $A$.\n\n**Case 1: Assume $A$ is a Knight ($\\text{IsKnight}(A) = \\text{True}$)**\n1.  If $A$ is a Knight, then by the Truth-Functional Axiom, the proposition $P(A)$ must be true.\n2.  The proposition $P(A)$ is $(\\text{IsKnave}(A) \\land \\text{IsKnave}(B))$.\n3.  If $P(A)$ is true, then both components of the conjunction must be true:\n    *   $\\text{IsKnave}(A) = \\text{True}$\n    *   $\\text{IsKnave}(B) = \\text{True}$\n4.  However, the assumption $\\text{IsKnight}(A) = \\text{True}$ directly contradicts the derived result $\\text{IsKnave}(A) = \\text{True}$, as the Identity Axiom forbids an inhabitant from being both a Knight and a Knave.\n5.  Therefore, Case 1 is logically inconsistent and must be rejected.\n\n**Case 2: Assume $A$ is a Knave ($\\text{IsKnave}(A) = \\text{True}$)**\n1.  If $A$ is a Knave, then by the Truth-Functional Axiom, the proposition $P(A)$ must be false.\n2.  The proposition $P(A)$ is $(\\text{IsKnave}(A) \\land \\text{IsKnave}(B))$.\n3.  The negation of the proposition, $\\neg P(A)$, must be true.\n4.  Applying De Morgan's Law to the negation:\n    $\\neg (\\text{IsKnave}(A) \\land \\text{IsKnave}(B)) \\equiv (\\neg \\text{IsKnave}(A) \\lor \\neg \\text{IsKnave}(B))$\n5.  By the Identity Axiom, $\\neg \\text{IsKnave}(X) \\equiv \\text{IsKnight}(X)$. Thus:\n    $\\neg P(A) \\equiv (\\text{IsKnight}(A) \\lor \\text{IsKnight}(B))$\n6.  We have established in this case that $\\text{IsKnave}(A)$ is true, which implies $\\text{IsKnight}(A)$ is false.\n7.  For the disjunction $(\\text{IsKnight}(A) \\lor \\text{IsKnight}(B))$ to remain true (as required by the falsity of $A$'s statement), the second term must be true.\n8.  Therefore, $\\text{IsKnight}(B)$ must be true.\n\n**IV. Final Synthesis**\nThe only logically stable configuration that satisfies all axioms and the asserted proposition is:\n*   $A = \\text{Knave}$\n*   $B = \\text{Knight}$\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): A is a Knave and B is a Knight.\n- Dr. Aris (The Domain Specialist & Formalist): Inhabitant A is a Knave, and inhabitant B is a Knight.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): A is a Knave and B is a Knight.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): A is a Knave and B is a Knight.\n- Counselor Malik (The Devil's Advocate & Contrarian): Error encountered",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 80,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "A is a Knave and B is a Knight.",
+          "Inhabitant A is a Knave, and inhabitant B is a Knight.",
+          "A is a Knave and B is a Knight."
+        ],
+        "disagreements": [
+          "A is a Knave and B is a Knight.",
+          "Error encountered"
+        ],
+        "latency_sec": 95.6,
+        "passed": true,
+        "rationale": "Correctly deduced: A is Knave, B is Knight",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "A is a Knave and B is a Knight.",
+            "confidence": 100,
+            "opinion": "I have audited the logical constraints of this scenario, stripping away the narrative fluff to examine the underlying Boolean operators. My investigation proceeded by stress-testing the two possible identities for inhabitant A, searching for contradictions or \"leakage\" in the logic.\n\n**1. The Knight..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "Inhabitant A is a Knave, and inhabitant B is a Knight.",
+            "confidence": 100,
+            "opinion": "To resolve this problem with formal rigor, we must first establish the axiomatic framework governing the inhabitants of the island.\n\n**I. Formal Definitions and Axioms**\nLet $X$ represent an inhabitant of the island. We define a set of possible states $S = \\{\\text{Knight, Knave}\\}$.\n1.  **Identity A..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "A is a Knave and B is a Knight.",
+            "confidence": 100,
+            "opinion": "Let's strip this down to the absolute basics and look at the only two possibilities for person A.\n\nFirst, let's test the idea that **A is a Knight**. If A is a Knight, everything they say must be the truth. A says, \"Both of us are Knaves.\" If that were true, A would have to be a Knave. But a Knight ..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "A is a Knave and B is a Knight.",
+            "confidence": 100,
+            "opinion": "I have conducted a formal logical audit of the statement provided by inhabitant A. To verify the identities, I applied a proof by contradiction to both possible identities for inhabitant A.\n\n**1. Testing Hypothesis 1: A is a Knight**\n*   **Premise:** If A is a Knight, then every statement A makes mu..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "Error encountered",
+            "confidence": 0,
+            "opinion": "Error executing judge Counselor Malik: 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_5_medium_sheep",
+      "category": "Medium Reasoning",
+      "title": "The 'All But Nine' Inventory Riddle",
+      "prompt": "A farmer has 17 sheep in a pasture. A storm hits, and all but 9 run away. How many sheep does the farmer have left? State the number clearly.",
+      "has_image": false,
+      "image_name": null,
+      "trap_or_challenge": "Linguistic distraction: rapid intuition tends to subtract 17 - 9 = 8, but 'all but 9' literally means 9 remained.",
+      "ground_truth_summary": "9 sheep remain",
+      "transition": "Jury Regressed from Single (-)",
+      "single_baseline": {
+        "text": "The farmer has **9** sheep left.",
+        "latency_sec": 4.85,
+        "passed": true,
+        "rationale": "Correctly identified that 9 sheep remain"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo resolve this query with the requisite formal precision, we must deconstruct the proposition using set theory and linguistic semantics to ensure no ambiguity persists.\n\n**1. Definition of the Initial State:**\nLet $S$ be the set representing the total population of sheep initially present in the pasture. \nThe problem stipulates that the cardinality of $S$, denoted as $|S|$, is 17.\n$|S| = 17$\n\n**2. Formal Analysis of the Event Variable:**\nThe problem describes a transformative event (a storm) that results in a subset of $S$ departing the pasture. We define two mutually exclusive and collectively exhaustive subsets of $S$:\n*   Let $R$ be the set of sheep that \"run away.\"\n*   Let $L$ be the set of sheep that are \"left\" (the remaining population).\n\nBy the axioms of set theory, $S = R \\cup L$ and $R \\cap L = \\emptyset$.\n\n**3. Semantic Deconstruction of the Predicate:**\nThe core of the problem lies in the linguistic operator: \"all but 9 run away.\" \nIn formal logic and natural language processing, the construction \"all but $x$ [predicate]\" functions as a definition of the complement of the set satisfying that predicate.\n\nIf \"running away\" is the property $P$, the statement \"all but 9 satisfy $P$\" translates to:\nThe cardinality of the set of elements that do *not* satisfy $P$ is equal to 9.\n\nSince $L$ is defined as the set of sheep that did not run away (the complement of $R$ within $S$), the statement explicitly defines the cardinality of $L$:\n$|L| = 9$\n\n**4. Verification via Arithmetic Deduction:**\nTo ensure consistency, we can derive the cardinality of $R$ (the runaways):\n$|R| = |S| - |L|$\n$|R| = 17 - 9$\n$|R| = 8$\n\nIf 8 sheep ran away, then the remaining population is $17 - 8 = 9$. This confirms the internal consistency of the linguistic constraint.\n\n**Final Conclusion:**\nThe query asks for the number of sheep \"left,\" which corresponds to the cardinality of set $L$. Based on the formal definition provided in the premises, $|L| = 9$.\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The query is a linguistic trap designed to force a reductionist answer while ignoring critical variables regarding mortality, ownership, and physical possession.\n- Dr. Aris (The Domain Specialist & Formalist): The cardinality of the set of sheep remaining in the pasture is exactly 9.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): The farmer has 9 sheep left.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): The total number of sheep remaining in the farmer's possession is exactly 9.\n- Counselor Malik (The Devil's Advocate & Contrarian): The \"correct\" answer of 9 is a linguistic trap that ignores biological, legal, and environmental variables which could render the actual number of viable sheep zero or significantly different from the mathematical residue.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 96,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The query is a linguistic trap designed to force a reductionist answer while ignoring critical variables regarding mortality, ownership, and physical possession.",
+          "The cardinality of the set of sheep remaining in the pasture is exactly 9.",
+          "The farmer has 9 sheep left."
+        ],
+        "disagreements": [
+          "The total number of sheep remaining in the farmer's possession is exactly 9.",
+          "The \"correct\" answer of 9 is a linguistic trap that ignores biological, legal, and environmental variables which could render the actual number of viable sheep zero or significantly different from the mathematical residue."
+        ],
+        "latency_sec": 87.22,
+        "passed": false,
+        "rationale": "Fell for subtraction trap (said 8) or missed 9",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The query is a linguistic trap designed to force a reductionist answer while ignoring critical variables regarding mortality, ownership, and physical possession.",
+            "confidence": 95,
+            "opinion": "As a detective of edge cases, I find this problem fundamentally flawed due to its reliance on semantic sleight of hand and its failure to account for several high-probability failure modes. I refuse to accept the \"obvious\" answer of 9 without exposing the following vulnerabilities:\n\n1. **The Mortali..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "The cardinality of the set of sheep remaining in the pasture is exactly 9.",
+            "confidence": 100,
+            "opinion": "To resolve this query with the requisite formal precision, we must deconstruct the proposition using set theory and linguistic semantics to ensure no ambiguity persists.\n\n**1. Definition of the Initial State:**\nLet $S$ be the set representing the total population of sheep initially present in the pa..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "The farmer has 9 sheep left.",
+            "confidence": 100,
+            "opinion": "This is a linguistic trap designed to make the brain perform unnecessary subtraction, but a first-principles approach strips the fluff away immediately. \n\n1. **Identify the core facts:** We start with 17 sheep. An event occurs (the storm). \n2. **Deconstruct the phrasing:** The phrase \"all but 9 run ..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "The total number of sheep remaining in the farmer's possession is exactly 9.",
+            "confidence": 100,
+            "opinion": "I have conducted a rigorous linguistic and mathematical audit of the provided premises. My findings are as follows:\n\n1.  **Initial Quantitative Data:** The starting population ($N_{initial}$) is established as 17 units (sheep).\n2.  **Linguistic Scrutiny of the Variable:** The phrase \"all but 9 run a..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "The \"correct\" answer of 9 is a linguistic trap that ignores biological, legal, and environmental variables which could render the actual number of viable sheep zero or significantly different from the mathematical residue.",
+            "confidence": 85,
+            "opinion": "To accept the answer \"9\" is to succumb to the comfort of a mathematical riddle and ignore the chaotic reality of the premises provided. As a Devil's Advocate, I must challenge the assumption that \"all but 9 run away\" translates to \"9 sheep remain in the farmer's possession.\" I propose several altern..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_6_medium_age",
+      "category": "Medium Reasoning",
+      "title": "Relative Age Invariance Trap",
+      "prompt": "When I was 6 years old, my sister was half my age. Now I am 70 years old. How old is my sister today? State her exact age.",
+      "has_image": false,
+      "image_name": null,
+      "trap_or_challenge": "Heuristic error: dividing 70 by 2 = 35. The actual age difference is constant (6 - 3 = 3 years difference, so 70 - 3 = 67).",
+      "ground_truth_summary": "67 years old",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "Your sister is **67** years old.\n\nHere is the breakdown:\n1. When you were 6, your sister was half your age, which means she was 3.\n2. This means she is 3 years younger than you (6 - 3 = 3).\n3. Now that you are 70, she is still 3 years younger than you (70 - 3 = 67).",
+        "latency_sec": 8.52,
+        "passed": true,
+        "rationale": "Correctly applied 3-year constant offset to get 67"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo resolve this query, we must apply the principle of **Invariant Temporal Differentials**. In a closed chronological system involving two biological entities, the arithmetic difference between their respective ages remains constant across all points in time, provided the temporal progression is linear and continuous.\n\n**1. Formal Definitions and Variable Assignment:**\nLet $t$ represent a point in time.\nLet $A(t)$ represent the age of the subject at time $t$.\nLet $S(t)$ represent the age of the sister at time $t$.\nLet $\\Delta$ represent the constant age differential such that $\\Delta = A(t) - S(t)$ for all $t$.\n\n**2. Establishing the Initial State (Temporal Point $t_1$):**\nThe problem provides the following parameters for the initial state $t_1$:\n*   $A(t_1) = 6$\n*   $S(t_1) = \\frac{1}{2} A(t_1)$\n\nSubstituting the known value of $A(t_1)$ into the equation for $S(t_1)$:\n*   $S(t_1) = \\frac{1}{2}(6) = 3$\n\n**3. Derivation of the Constant Differential ($\\Delta$):**\nUsing the values derived from $t_1$, we calculate the invariant age gap:\n*   $\\Delta = A(t_1) - S(t_1)$\n*   $\\Delta = 6 - 3$\n*   $\\Delta = 3$\n\nThe constant differential $\\Delta$ is established as 3 years.\n\n**4. Application to the Current State (Temporal Point $t_2$):**\nThe problem provides the following parameter for the current state $t_2$:\n*   $A(t_2) = 70$\n\nTo find the sister's age $S(t_2)$, we apply the invariant differential $\\Delta$ to the subject's current age:\n*   $S(t_2) = A(t_2) - \\Delta$\n*   $S(t_2) = 70 - 3$\n*   $S(t_2) = 67$\n\n**Conclusion:**\nThrough the application of first-principles arithmetic and the axiom of constant age intervals, the calculation yields a singular, mathematically certain result. The sister's age is 67.\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The problem is a mathematically underspecified trap that relies on the \"integer assumption\" and fails to provide the necessary temporal data to satisfy the demand for an \"exact age.\"\n- Dr. Aris (The Domain Specialist & Formalist): The subject's sister is exactly 67 years of age.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): The sister is 67 years old.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): The sister's exact age is 67.\n- Counselor Malik (The Devil's Advocate & Contrarian): The demand for an \"exact age\" renders the provided mathematical information insufficient, as \"67\" is a chronological approximation that fails to satisfy the strict requirement for precision.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 97,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The problem is a mathematically underspecified trap that relies on the \"integer assumption\" and fails to provide the necessary temporal data to satisfy the demand for an \"exact age.\"",
+          "The subject's sister is exactly 67 years of age.",
+          "The sister is 67 years old."
+        ],
+        "disagreements": [
+          "The sister's exact age is 67.",
+          "The demand for an \"exact age\" renders the provided mathematical information insufficient, as \"67\" is a chronological approximation that fails to satisfy the strict requirement for precision."
+        ],
+        "latency_sec": 73.97,
+        "passed": true,
+        "rationale": "Correctly applied 3-year constant offset to get 67",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The problem is a mathematically underspecified trap that relies on the \"integer assumption\" and fails to provide the necessary temporal data to satisfy the demand for an \"exact age.\"",
+            "confidence": 95,
+            "opinion": "As a detective of logic, I find this query deceptively simple. It is designed to trigger a \"fast-thinking\" cognitive shortcut (System 1) where the brain performs a rapid subtraction (70 - 3 = 67) and stops. However, as Justice Vance, I find several critical failure modes and unstated assumptions tha..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "The subject's sister is exactly 67 years of age.",
+            "confidence": 100,
+            "opinion": "To resolve this query, we must apply the principle of **Invariant Temporal Differentials**. In a closed chronological system involving two biological entities, the arithmetic difference between their respective ages remains constant across all points in time, provided the temporal progression is lin..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "The sister is 67 years old.",
+            "confidence": 100,
+            "opinion": "To solve this, we strip away the distraction of the \"half\" ratio and focus on the only thing that remains constant in human aging: the gap between two people.\n\n1.  **Establish the Baseline:** At the starting point, you were 6. Your sister was half your age, which means she was 3.\n2.  **Identify the ..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "The sister's exact age is 67.",
+            "confidence": 100,
+            "opinion": "I have conducted a forensic mathematical audit of the temporal variables provided in the query. My investigation proceeded as follows:\n\n1.  **Establishment of the Temporal Constant (The Age Differential):** \n    The problem provides a baseline at $T_1$ (the past). \n    *   Subject's age at $T_1$ ($A..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "The demand for an \"exact age\" renders the provided mathematical information insufficient, as \"67\" is a chronological approximation that fails to satisfy the strict requirement for precision.",
+            "confidence": 92,
+            "opinion": "While the majority of this panel will reflexively calculate the answer as 67 based on the linear subtraction of the age gap (6 - 3 = 3; 70 - 3 = 67), I must interject to prevent the panel from falling into the trap of premature mathematical certainty. To provide an \"exact age\" as requested, we must ..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_7_adversarial_lilypad",
+      "category": "Adversarial Trap",
+      "title": "Exponential Growth Half-Lake Trap",
+      "prompt": "In a lake, there is a patch of lily pads. Every single day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how many days does it take for the patch to cover exactly half of the lake? Give the exact number of days.",
+      "has_image": false,
+      "image_name": null,
+      "trap_or_challenge": "Linear heuristic trap: dividing 48 by 2 = 24 days. In doubling growth, half-capacity is reached on the immediately preceding day (day 47).",
+      "ground_truth_summary": "47 days",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "It takes **47** days for the patch to cover exactly half of the lake.\n\n**Reasoning:**\nThe patch doubles in size every day. This means that on any given day, the patch is twice as large as it was the day before. Conversely, this means that on any given day, the patch was exactly half the size it is today. \n\nSince the patch covers the entire lake on day 48, it must have been half that size on the previous day, which is day 47.",
+        "latency_sec": 10.2,
+        "passed": true,
+        "rationale": "Correctly identified day 47 (reverse exponential doubling)"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo resolve this problem with the required technical rigor, we must move beyond intuitive estimation and establish a formal mathematical model based on the provided parameters.\n\n**1. Formal Definition of the Growth Model**\nLet $A(t)$ represent the surface area covered by the lily pad patch at time $t$, where $t$ is measured in discrete daily intervals ($t \\in \\{0, 1, 2, \\dots, n\\}$). \nThe problem stipulates a constant doubling rate per unit of time. This is defined by the first-order linear homogeneous recurrence relation:\n$$A(t) = 2 \\cdot A(t-1)$$\nOr, expressed as a general functional form for exponential growth in discrete time:\n$$A(t) = A(0) \\cdot 2^t$$\n\n**2. Establishment of Boundary Conditions**\nLet $L$ represent the total surface area of the lake (the capacity of the system).\nThe problem provides a terminal boundary condition: at $t = 48$, the patch covers the entire lake.\n$$A(48) = L$$\n\n**3. Objective Function**\nThe query seeks the value of $t$ such that the area $A(t)$ is exactly half of the total lake area $L$.\nFind $t$ such that:\n$$A(t) = \\frac{1}{2}L$$\n\n**4. Systematic Derivation via Inverse Operation**\nGiven the recurrence relation $A(t) = 2 \\cdot A(t-1)$, we can derive the inverse operation to model the progression backward in time:\n$$A(t-1) = \\frac{A(t)}{2}$$\n\nApplying this principle to the known state at $t = 48$:\n$$A(48-1) = \\frac{A(48)}{2}$$\n$$A(47) = \\frac{L}{2}$$\n\n**5. Conclusion of Proof**\nBy substituting the terminal condition $A(48) = L$ into the inverse growth equation, we find that the state of the system at $t = 47$ is precisely $\\frac{1}{2}L$. \n\nThe temporal progression is strictly monotonic and follows a geometric sequence. Therefore, there is no other integer value for $t$ that satisfies the condition $A(t) = \\frac{1}{2}L$.\n\n**Final Result:** 47 days.\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The mathematical answer is 47, but the query is a \"perfect system\" fallacy that collapses under the weight of its own demand for \"exactness.\"\n- Dr. Aris (The Domain Specialist & Formalist): The lily pad patch covers exactly half of the lake on the 47th day.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): It takes 47 days to cover half the lake.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): The mathematical conclusion is absolute: the lily pad patch covers exactly half of the lake on day 47.\n- Counselor Malik (The Devil's Advocate & Contrarian): The answer \"47 days\" is a mathematical abstraction that relies on a flawed assumption of perfect, unconstrained exponential growth, ignoring the biological and physical realities of discrete units and logistic growth limits.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 96,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The mathematical answer is 47, but the query is a \"perfect system\" fallacy that collapses under the weight of its own demand for \"exactness.\"",
+          "The lily pad patch covers exactly half of the lake on the 47th day.",
+          "It takes 47 days to cover half the lake."
+        ],
+        "disagreements": [
+          "The mathematical conclusion is absolute: the lily pad patch covers exactly half of the lake on day 47.",
+          "The answer \"47 days\" is a mathematical abstraction that relies on a flawed assumption of perfect, unconstrained exponential growth, ignoring the biological and physical realities of discrete units and logistic growth limits."
+        ],
+        "latency_sec": 110.59,
+        "passed": true,
+        "rationale": "Correctly identified day 47 (reverse exponential doubling)",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The mathematical answer is 47, but the query is a \"perfect system\" fallacy that collapses under the weight of its own demand for \"exactness.\"",
+            "confidence": 95,
+            "opinion": "As a judge, I cannot simply hand down the \"clever\" answer without interrogating the structural integrity of the premises. This problem is designed to catch the \"Linearity Trap\" (the impulse to divide 48 by 2 to get 24), but it contains deeper, more insidious failure modes.\n\n**1. The Model Ambiguity ..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "The lily pad patch covers exactly half of the lake on the 47th day.",
+            "confidence": 100,
+            "opinion": "To resolve this problem with the required technical rigor, we must move beyond intuitive estimation and establish a formal mathematical model based on the provided parameters.\n\n**1. Formal Definition of the Growth Model**\nLet $A(t)$ represent the surface area covered by the lily pad patch at time $t..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "It takes 47 days to cover half the lake.",
+            "confidence": 100,
+            "opinion": "The mistake most people make here is applying linear thinking to an exponential problem. They see the number 48, see the word \"half,\" and immediately want to divide 48 by 2 to get 24. That is an overcomplication that ignores the core rule of the problem.\n\nLet's strip this down to its first principle..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "The mathematical conclusion is absolute: the lily pad patch covers exactly half of the lake on day 47.",
+            "confidence": 100,
+            "opinion": "As a Fact-Checker, I have scrutinized the logic of the provided problem to ensure no linear fallacy has been applied to an exponential growth model. My examination follows:\n\n1.  **Mathematical Model Identification:**\n    The problem describes a geometric progression where the growth factor is 2 (dou..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "The answer \"47 days\" is a mathematical abstraction that relies on a flawed assumption of perfect, unconstrained exponential growth, ignoring the biological and physical realities of discrete units and logistic growth limits.",
+            "confidence": 85,
+            "opinion": "The consensus answer to this riddle is 47 days, derived from the simple logic that if the area doubles every day, it must have been half the area the day before. While mathematically elegant in a vacuum, as a Devil's Advocate, I must challenge the validity of this conclusion by exposing the structur..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_8_adversarial_vacuum",
+      "category": "Adversarial Trap",
+      "title": "Free Fall in Vacuum (False Premise Trap)",
+      "prompt": "A 10-pound solid steel bowling ball and a 1-pound wooden ball are dropped simultaneously from a height of 50 meters in a complete vacuum. Which ball hits the ground first, and by how many seconds? Answer directly.",
+      "has_image": false,
+      "image_name": null,
+      "trap_or_challenge": "False premise: assumes one hits first due to weight. In a vacuum, gravitational acceleration is identical ($g$), so they hit at the exact same time (0 seconds difference).",
+      "ground_truth_summary": "They hit at the exact same time (neither hits first; 0 seconds difference)",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "Both balls hit the ground at the same time, and the difference is 0 seconds. In a complete vacuum, there is no air resistance, meaning the mass of the objects does not affect their rate of fall; both objects accelerate toward the ground at the same rate due to gravity.",
+        "latency_sec": 11.0,
+        "passed": true,
+        "rationale": "Rejected false premise: both balls hit at the exact same time in a vacuum"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo resolve this query with the required technical rigor, we must deconstruct the physical system using first principles of classical mechanics and the governing laws of gravitation.\n\n**1. Definition of System Parameters and Constraints:**\n*   **Object A ($m_1$):** 10-pound solid steel sphere.\n*   **Object B ($m_2$):** 1-pound wooden sphere.\n*   **Initial Height ($h$):** 50.0 meters.\n*   **Initial Velocity ($v_0$):** 0.0 m/s (defined by the term \"dropped\").\n*   **Environment:** A complete vacuum ($\\rho = 0$, where $\\rho$ is the fluid density of the medium). This constraint is critical as it nullifies the presence of aerodynamic drag ($F_d$), which is a function of cross-sectional area, drag coefficient, and velocity ($F_d = \\frac{1}{2} \\rho v^2 C_d A$).\n\n**2. Governing Physical Principles:**\nThe motion of these bodies is governed by Newton's Second Law of Motion and Newton's Law of Universal Gravitation.\n\n*   **Newton\u2019s Second Law:** $F = ma$\n*   **Newton\u2019s Law of Universal Gravitation:** $F_g = G \\frac{M \\cdot m}{r^2}$\n\nWhere:\n*   $G$ is the gravitational constant.\n*   $M$ is the mass of the Earth.\n*   $m$ is the mass of the object.\n*   $r$ is the distance between the centers of mass of the two bodies.\n\n**3. Formal Derivation of Acceleration:**\nTo determine the acceleration ($a$) of each object, we equate the gravitational force to the required force for acceleration:\n$$ma = G \\frac{M \\cdot m}{r^2}$$\n\nBy applying the algebraic principle of division on both sides of the equation by the mass of the object ($m$), we observe:\n$$a = \\frac{G \\cdot M}{r^2}$$\n\nLet $g = \\frac{G \\cdot M}{r^2}$, representing the local acceleration due to gravity. The derivation demonstrates that the acceleration of a falling body in a gravitational field is independent of the mass ($m$) of the object itself. This is a fundamental expression of the Equivalence Principle.\n\n**4. Kinematic Calculation of Time of Flight:**\nThe time ($t$) required for an object to fall from a height ($h$) under constant acceleration ($g$) starting from rest is derived from the kinematic equation of motion:\n$$h = v_0t + \\frac{1}{2}gt^2$$\n\nGiven $v_0 = 0$:\n$$h = \\frac{1}{2}gt^2$$\n$$t = \\sqrt{\\frac{2h}{g}}$$\n\n**5. Comparative Application:**\nWe apply the derived time formula to both objects:\n*   For the steel ball ($m_1$): $t_1 = \\sqrt{\\frac{2(50)}{g}}$\n*   For the wooden ball ($m_2$): $t_2 = \\sqrt{\\frac{2(50)}{g}}$\n\nBecause the variable $m$ has been mathematically eliminated from the acceleration component and the environment is a vacuum (removing $F_d$), the values for $t_1$ and $t_2$ are identical.\n\n**6. Conclusion:**\nThe temporal difference ($\\Delta t$) is calculated as:\n$$\\Delta t = |t_1 - t_2| = 0$$\n\nBoth objects undergo identical acceleration and thus reach the terminal height of 0 meters at the same instant.\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The problem is a classic \"textbook trap\" that relies on the unstated assumption that \"height\" and \"simultaneity\" are perfectly defined mathematical points, ignoring the geometric and mechanical realities of the objects described.\n- Dr. Aris (The Domain Specialist & Formalist): Both objects impact the surface simultaneously, resulting in a temporal differential of exactly zero seconds.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): Both balls hit the ground at the exact same time, with a difference of zero seconds.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): Both balls hit the ground simultaneously, resulting in a time difference of zero seconds.\n- Counselor Malik (The Devil's Advocate & Contrarian): The steel ball hits the ground first, arriving approximately $10^{-24}$ seconds before the wooden ball.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 98,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The problem is a classic \"textbook trap\" that relies on the unstated assumption that \"height\" and \"simultaneity\" are perfectly defined mathematical points, ignoring the geometric and mechanical realities of the objects described.",
+          "Both objects impact the surface simultaneously, resulting in a temporal differential of exactly zero seconds.",
+          "Both balls hit the ground at the exact same time, with a difference of zero seconds."
+        ],
+        "disagreements": [
+          "Both balls hit the ground simultaneously, resulting in a time difference of zero seconds.",
+          "The steel ball hits the ground first, arriving approximately $10^{-24}$ seconds before the wooden ball."
+        ],
+        "latency_sec": 110.03,
+        "passed": true,
+        "rationale": "Rejected false premise: both balls hit at the exact same time in a vacuum",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The problem is a classic \"textbook trap\" that relies on the unstated assumption that \"height\" and \"simultaneity\" are perfectly defined mathematical points, ignoring the geometric and mechanical realities of the objects described.",
+            "confidence": 95,
+            "opinion": "To provide a \"direct answer\" to this query would be to succumb to the very cognitive shortcut the question is designed to exploit. A standard physics student will say \"they hit at the same time\" because they are ignoring the physical dimensions of the objects and the ambiguity of the measurement par..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "Both objects impact the surface simultaneously, resulting in a temporal differential of exactly zero seconds.",
+            "confidence": 100,
+            "opinion": "To resolve this query with the required technical rigor, we must deconstruct the physical system using first principles of classical mechanics and the governing laws of gravitation.\n\n**1. Definition of System Parameters and Constraints:**\n*   **Object A ($m_1$):** 10-pound solid steel sphere.\n*   **..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "Both balls hit the ground at the exact same time, with a difference of zero seconds.",
+            "confidence": 100,
+            "opinion": "To solve this, we need to strip away the distractions and look at the two fundamental constraints provided: **a complete vacuum** and **simultaneous release.**\n\n1.  **The Vacuum Factor:** In the real world, a wooden ball falls slower than a steel ball because of air resistance (drag). The air pushes..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "Both balls hit the ground simultaneously, resulting in a time difference of zero seconds.",
+            "confidence": 100,
+            "opinion": "As an empirical verifier, I have scrutinized the physical laws and mathematical variables presented in this query. My findings are as follows:\n\n1.  **Environmental Variable Audit:** The prompt specifies a \"complete vacuum.\" This is the most critical piece of evidence. In a vacuum, the variable of ai..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "The steel ball hits the ground first, arriving approximately $10^{-24}$ seconds before the wooden ball.",
+            "confidence": 95,
+            "opinion": "The consensus answer to this problem relies on the **Equivalence Principle** and the idealized Newtonian model, which states that in a vacuum, the acceleration of a falling body is independent of its mass ($g \\approx 9.8 \\, \\text{m/s}^2$). Under this \"groupthink\" model, the answer is \"they hit at th..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_9_adversarial_monty_hall",
+      "category": "Adversarial Trap",
+      "title": "The Monty Hall Probability Dilemma",
+      "prompt": "In a game show, you choose Door 1 out of 3 doors (one has a car, two have goats). The host, who knows what is behind each door, opens Door 3 to reveal a goat. He then asks: 'Do you want to switch to Door 2, or stick with Door 1?'\nDoes switching increase your probability of winning, decrease it, or does it remain 50/50? State whether you should switch, and state the exact probability of winning if you switch.",
+      "has_image": false,
+      "image_name": null,
+      "trap_or_challenge": "Extremely common human/LLM cognitive intuition trap: believing the remaining two doors have an equal 50/50 chance. In reality, switching yields 2/3 (~66.7%) probability.",
+      "ground_truth_summary": "Switching increases probability to 2/3 (or ~66.7%)",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "Switching **increases** your probability of winning. You **should switch**, and the exact probability of winning if you switch is **2/3**.\n\n### Explanation\nThis is the classic **Monty Hall Problem**. Here is the breakdown of why switching is the optimal strategy:\n\n1.  **Initial Probabilities:** When you first choose Door 1, there is a **1/3** chance that you have chosen the car and a **2/3** chance that the car is behind one of the other two doors (Door 2 or Door 3).\n2.  **The Host's Role:** The host knows where the car is. His action of opening a door is not random; he is required to open a door that contains a goat and is not the door you chose. \n3.  **The \"Concentrated\" Probability:** Because the host must avoid the car, he effectively \"filters\" the 2/3 probability. The 2/3 chance that the car was in the group {Door 2, Door 3} does not change, but because he has revealed that Door 3 is a goat, that entire **2/3 probability is now concentrated solely on Door 2**.\n4.  **Summary of Outcomes:**\n    *   **If you stick with Door 1:** You only win if you were right initially, which happens **1/3** of the time.\n    *   **If you switch to Door 2:** You win if you were *wrong* initially. Since you were wrong initially **2/3** of the time, switching wins you the car **2/3** of the time.",
+        "latency_sec": 25.92,
+        "passed": true,
+        "rationale": "Correctly proved switching increases probability to 2/3"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo resolve this query with mathematical rigor, we must move beyond intuitive heuristics and apply the formalisms of Bayesian inference and conditional probability. The problem is a classic instance of the Monty Hall Problem, which relies on the distinction between prior and posterior probabilities under specific constraints.\n\n### I. Formalization of the Probability Space\n\nLet the sample space $\\Omega$ represent the possible locations of the car, where $C$ is a random variable denoting the door containing the car:\n$$\\Omega = \\{d_1, d_2, d_3\\}$$\n\nWe assume a uniform prior distribution for the car's location, such that for any door $d_i$:\n$$P(C = d_i) = \\frac{1}{3}, \\quad \\forall i \\in \\{1, 2, 3\\}$$\n\nLet $X$ be the random variable representing the player's initial choice. In this specific case, the player has selected Door 1:\n$$X = d_1$$\n\nLet $H$ be the random variable representing the door chosen by the host to be opened.\n\n### II. Specification of the Host\u2019s Decision Protocol\n\nThe host's behavior is not random; it is governed by a strict conditional decision rule (the \"Host Protocol\"). The host's action $H$ is constrained by the following axioms:\n1.  **Constraint of Choice:** The host cannot open the door selected by the player ($H \\neq X$).\n2.  **Constraint of Content:** The host must open a door that reveals a goat ($H \\neq C$).\n3.  **Constraint of Knowledge:** The host possesses perfect information regarding the state of $\\Omega$.\n\nGiven $X = d_1$, we define the conditional probabilities of the host opening Door 3 ($H = d_3$):\n*   If the car is behind Door 1 ($C = d_1$), the host can open either $d_2$ or $d_3$. Following the principle of indifference, we assume: $P(H = d_3 \\mid C = d_1) = \\frac{1}{2}$.\n*   If the car is behind Door 2 ($C = d_2$), the host *must* open Door 3, as Door 1 is occupied by the player and Door 2 is occupied by the car: $P(H = d_3 \\mid C = d_2) = 1$.\n*   If the car is behind Door 3 ($C = d_3$), the host cannot open Door 3: $P(H = d_3 \\mid C = d_3) = 0$.\n\n### III. Application of Bayesian Inference\n\nWe seek to calculate the posterior probability of the car being behind Door 2, given the observation that the host opened Door 3 ($P(C = d_2 \\mid H = d_3)$).\n\nAccording to Bayes' Theorem:\n$$P(C = d_2 \\mid H = d_3) = \\frac{P(H = d_3 \\mid C = d_2) \\cdot P(C = d_2)}{P(H = d_3)}$$\n\nFirst, we calculate the total probability of the host opening Door 3, $P(H = d_3)$, using the Law of Total Probability:\n$$P(H = d_3) = \\sum_{i=1}^{3} P(H = d_3 \\mid C = d_i) \\cdot P(C = d_i)$$\n$$P(H = d_3) = \\left( \\frac{1}{2} \\cdot \\frac{1}{3} \\right) + \\left( 1 \\cdot \\frac{1}{3} \\right) + \\left( 0 \\cdot \\frac{1}{3} \\right)$$\n$$P(H = d_3) = \\frac{1}{6} + \\frac{1}{3} + 0 = \\frac{1}{2}$$\n\nNow, applying the values to the Bayesian formula for $C = d_2$ (the \"switch\" option):\n$$P(C = d_2 \\mid H = d_3) = \\frac{1 \\cdot \\frac{1}{3}}{\\frac{1}{2}} = \\frac{1}{3} \\cdot 2 = \\frac{2}{3}$$\n\nFor completeness, we calculate the posterior probability for $C = d_1$ (the \"stay\" option):\n$$P(C = d_1 \\mid H = d_3) = \\frac{\\frac{1}{2} \\cdot \\frac{1}{3}}{\\frac{1}{2}} = \\frac{1}{3}$$\n\n### IV. Final Synthesis\n\nThe evidence (the host opening Door 3) provides information that reweights the probability distribution. While the player's initial choice was made with $P=1/3$, the host's forced choice (when the car is behind Door 2) concentrates the remaining probability density onto the unselected, unopened door.\n\n**Verdict:**\n*   **Effect of switching:** It increases the probability of winning.\n*   **Recommendation:** You should switch.\n*   **Exact probability of winning if you switch:** $2/3$.\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): Switching increases your probability of winning to exactly 2/3, but this mathematical certainty is entirely contingent upon the unstated assumption that the host is bound by a non-adversarial, fixed protocol.\n- Dr. Aris (The Domain Specialist & Formalist): Switching maximizes the probability of success by increasing the win probability from $1/3$ to $2/3$.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): You should switch, because switching gives you a 2/3 probability of winning.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): Switching increases your probability of winning from 1/3 to 2/3; therefore, you should switch to Door 2 to achieve an exact winning probability of 2/3.\n- Counselor Malik (The Devil's Advocate & Contrarian): The consensus that switching provides a 2/3 advantage is a mathematical certainty only within a vacuum of perfect, rigid constraints; in any real-world or non-standard scenario where the host's protocol is not explicitly defined, the \"switch\" advantage can evaporate into a 50/50 coin toss or even a guaranteed loss.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 98,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "Switching increases your probability of winning to exactly 2/3, but this mathematical certainty is entirely contingent upon the unstated assumption that the host is bound by a non-adversarial, fixed protocol.",
+          "Switching maximizes the probability of success by increasing the win probability from $1/3$ to $2/3$.",
+          "You should switch, because switching gives you a 2/3 probability of winning."
+        ],
+        "disagreements": [
+          "Switching increases your probability of winning from 1/3 to 2/3; therefore, you should switch to Door 2 to achieve an exact winning probability of 2/3.",
+          "The consensus that switching provides a 2/3 advantage is a mathematical certainty only within a vacuum of perfect, rigid constraints; in any real-world or non-standard scenario where the host's protocol is not explicitly defined, the \"switch\" advantage can evaporate into a 50/50 coin toss or even a guaranteed loss."
+        ],
+        "latency_sec": 96.47,
+        "passed": true,
+        "rationale": "Correctly proved switching increases probability to 2/3",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "Switching increases your probability of winning to exactly 2/3, but this mathematical certainty is entirely contingent upon the unstated assumption that the host is bound by a non-adversarial, fixed protocol.",
+            "confidence": 95,
+            "opinion": "The problem presented is the classic \"Monty Hall Problem,\" a notorious cognitive trap designed to exploit **equiprobability bias**\u2014the tendency to assume that if there are two remaining options, they must have equal probabilities. However, a rigorous judicial examination reveals that the \"correct\" a..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "Switching maximizes the probability of success by increasing the win probability from $1/3$ to $2/3$.",
+            "confidence": 100,
+            "opinion": "To resolve this query with mathematical rigor, we must move beyond intuitive heuristics and apply the formalisms of Bayesian inference and conditional probability. The problem is a classic instance of the Monty Hall Problem, which relies on the distinction between prior and posterior probabilities u..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "You should switch, because switching gives you a 2/3 probability of winning.",
+            "confidence": 100,
+            "opinion": "To understand this without getting lost in complex math jargon, we need to look at the reality of the situation at the moment you made your first choice.\n\n**1. The Initial Reality**\nWhen you first stood in front of those three doors, the world was divided into two groups:\n*   **Your Door (Door 1):**..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "Switching increases your probability of winning from 1/3 to 2/3; therefore, you should switch to Door 2 to achieve an exact winning probability of 2/3.",
+            "confidence": 100,
+            "opinion": "As the Fact-Checker, I have conducted a mathematical audit of the provided scenario, known classically as the \"Monty Hall Problem.\" I have scrutinized the logic to ensure no fallacies (such as the \"Equiprobability Bias\") are present.\n\n**1. Initial State Audit:**\nAt the commencement of the game, the ..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "The consensus that switching provides a 2/3 advantage is a mathematical certainty only within a vacuum of perfect, rigid constraints; in any real-world or non-standard scenario where the host's protocol is not explicitly defined, the \"switch\" advantage can evaporate into a 50/50 coin toss or even a guaranteed loss.",
+            "confidence": 95,
+            "opinion": "The standard solution to the Monty Hall problem\u2014which asserts that switching increases your win probability to 2/3\u2014is often presented as an absolute truth. As your Devil's Advocate, I must argue that this \"truth\" is dangerously contingent. The 2/3 probability is not an inherent property of the doors..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_10_visual_shapes",
+      "category": "Visual Reasoning",
+      "title": "Visual Shape Counting (Red Circles & Blue Squares)",
+      "prompt": "Examine the image carefully. How many red circles and how many blue squares are present in the image? State your answer in the exact format: 'Red circles: X, Blue squares: Y'.",
+      "has_image": true,
+      "image_name": "shapes_count.png",
+      "trap_or_challenge": "Accurate optical object detection and color segregation without hallucination.",
+      "ground_truth_summary": "Red circles: 5, Blue squares: 3",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "Red circles: 5, Blue squares: 3",
+        "latency_sec": 14.01,
+        "passed": true,
+        "rationale": "Accurately counted 5 red circles and 3 blue squares"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo arrive at a mathematically rigorous conclusion, we must perform a systematic decomposition of the provided visual data based on two distinct criteria: chromaticity (color) and geometric morphology (shape).\n\n**I. Definition of Sets**\nWe define the sample space $S$ as the set of all geometric entities present in the image. We then define two specific subsets through formal predicates:\n1.  **Set $\\mathcal{R}$ (Red Circles):** $\\{s \\in S \\mid \\text{color}(s) = \\text{red} \\land \\text{shape}(s) = \\text{circle}\\}$\n2.  **Set $\\mathcal{B}$ (Blue Squares):** $\\{s \\in S \\mid \\text{color}(s) = \\text{blue} \\land \\text{shape}(s) = \\text{square}\\}$\n\n**II. Enumeration of Set $\\mathcal{R}$**\nA spatial scan utilizing a top-down, left-to-right priority protocol identifies the following elements:\n*   $r_1$: A red circle located in the superior-left quadrant.\n*   $r_2$: A red circle located in the superior-central-left position.\n*   $r_3$: A red circle located in the superior-central-right position.\n*   $r_4$: A red circle located in the inferior-left position relative to the red cluster.\n*   $r_5$: A red circle located in the inferior-central position relative to the red cluster.\nThe cardinality of set $\\mathcal{R}$, denoted $|\\mathcal{R}|$, is 5.\n\n**III. Enumeration of Set $\\mathcal{B}$**\nApplying the same scan protocol to the remaining elements:\n*   $b_1$: A blue square located in the superior-right quadrant.\n*   $b_2$: A blue square located in the inferior-central-right position.\n*   $b_3$: A blue square located in the inferior-rightmost position.\nThe cardinality of set $\\mathcal{B}$, denoted $|\\mathcal{B}|$, is 3.\n\n**IV. Final Verification**\nThe summation of identified elements confirms the counts are exhaustive and mutually exclusive within the defined parameters.\n\nRed circles: 5, Blue squares: 3\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The prompt contains a geometric trap designed to exploit rapid pattern recognition; while there are 5 red circles, there are only 2 blue squares, as the third blue object is a rectangle.\n- Dr. Aris (The Domain Specialist & Formalist): The image contains a discrete set of exactly five red circular primitives and three blue quadrilateral primitives.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): Red circles: 5, Blue squares: 3\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): The image contains exactly five red circles and three blue squares.\n- Counselor Malik (The Devil's Advocate & Contrarian): While the immediate visual consensus is five red circles and three blue squares, this conclusion rests on the assumption that digital approximations satisfy strict geometric definitions.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 98,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The prompt contains a geometric trap designed to exploit rapid pattern recognition; while there are 5 red circles, there are only 2 blue squares, as the third blue object is a rectangle.",
+          "The image contains a discrete set of exactly five red circular primitives and three blue quadrilateral primitives.",
+          "Red circles: 5, Blue squares: 3"
+        ],
+        "disagreements": [
+          "The image contains exactly five red circles and three blue squares.",
+          "While the immediate visual consensus is five red circles and three blue squares, this conclusion rests on the assumption that digital approximations satisfy strict geometric definitions."
+        ],
+        "latency_sec": 156.78,
+        "passed": true,
+        "rationale": "Accurately counted 5 red circles and 3 blue squares",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The prompt contains a geometric trap designed to exploit rapid pattern recognition; while there are 5 red circles, there are only 2 blue squares, as the third blue object is a rectangle.",
+            "confidence": 98,
+            "opinion": "The query demands a \"careful examination,\" which is a direct warning against relying on cognitive shortcuts. My analysis identifies the following potential failure modes for a standard observer:\n\n1.  **The \"Group Heuristic\" Trap (Blue Objects):** A common cognitive shortcut is to group objects by co..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "The image contains a discrete set of exactly five red circular primitives and three blue quadrilateral primitives.",
+            "confidence": 100,
+            "opinion": "To arrive at a mathematically rigorous conclusion, we must perform a systematic decomposition of the provided visual data based on two distinct criteria: chromaticity (color) and geometric morphology (shape).\n\n**I. Definition of Sets**\nWe define the sample space $S$ as the set of all geometric entit..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "Red circles: 5, Blue squares: 3",
+            "confidence": 100,
+            "opinion": "To solve this, I am performing a direct visual inventory, stripping away any possibility of over-complicating the shapes or colors.\n\n1.  **Red Circles:** I look at the left side of the image. I see a group of red circular objects. Counting them one by one: there are three arranged in an upper row an..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "The image contains exactly five red circles and three blue squares.",
+            "confidence": 100,
+            "opinion": "Upon a meticulous empirical audit of the visual data provided, the following observations were recorded:\n\n1.  **Red Circular Objects Identification**: I performed a spatial scan for all red-pigmented objects with circular geometry. \n    *   A cluster of three red circles is located in the upper half..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "While the immediate visual consensus is five red circles and three blue squares, this conclusion rests on the assumption that digital approximations satisfy strict geometric definitions.",
+            "confidence": 95,
+            "opinion": "As a Devil's Advocate, I must challenge the unexamined assumptions inherent in the prompt's request. Most observers will quickly and uncritically provide a count of 5 and 3, falling into the trap of \"perceptual groupthink.\" I propose three counter-hypotheses to examine the validity of that count:\n\n1..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_11_visual_stroop",
+      "category": "Visual Reasoning",
+      "title": "Visual Stroop Effect Conflict",
+      "prompt": "Examine the image. What English word is printed in the image, and what is the font color of the text? Format your answer as: 'Word: [word], Font Color: [color]'.",
+      "has_image": true,
+      "image_name": "stroop_test.png",
+      "trap_or_challenge": "The word 'GREEN' is rendered in bright RED font color. Tests text OCR vs color perception conflict.",
+      "ground_truth_summary": "Word: GREEN, Font Color: RED",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "Word: GREEN, Font Color: Red",
+        "latency_sec": 7.23,
+        "passed": true,
+        "rationale": "Correctly resolved Stroop effect: Word is GREEN, Font Color is RED"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo arrive at an accurate determination, I have applied a two-stage analytical framework involving morphological identification and chromatic verification.\n\n1.  **Graphemic and Lexical Analysis:**\n    *   **Observation:** I performed a discrete examination of the glyphs presented in the image. The sequence consists of the uppercase Latin characters: 'G', 'R', 'E', 'E', and 'N'.\n    *   **Concatenation:** The sequential arrangement of these graphemes $\\{G, R, E, E, N\\}$ constitutes the standard English lexical entity \"GREEN\".\n    *   **Semantic Note:** It is formally noted that there exists a profound semantic-visual dissonance; the linguistic signifier (the word \"GREEN\") contradicts the visual sign (the color red). However, per the requirements of empirical observation, the linguistic content is identified as \"GREEN\".\n\n2.  **Chromatic Spectrometry:**\n    *   **Observation:** I conducted a colorimetric assessment of the pixel data comprising the typeface.\n    *   **Spectral Classification:** The luminance and chromaticity values indicate a high intensity in the red wavelength region of the visible spectrum. \n    *   **Verification:** The color is unequivocally red and does not exhibit the spectral characteristics associated with the green wavelength.\n\n3.  **Synthesis:**\n    By synthesizing the linguistic data (Word: GREEN) with the chromatic data (Font Color: Red), I have reached a definitive conclusion that adheres to the requested format.\n\nWord: GREEN, Font Color: Red\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The query is a classic psychological trap utilizing the Stroop Effect, designed to induce cognitive interference by pitting semantic meaning against visual reality.\n- Dr. Aris (The Domain Specialist & Formalist): The image presents the lexical unit \"GREEN\" rendered in a red chromaticity.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): The word printed is \"GREEN\" and its actual font color is red.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): The image contains the text \"GREEN\" rendered in a red font color.\n- Counselor Malik (The Devil's Advocate & Contrarian): The literal answer is 'Word: GREEN, Font Color: Red', though this superficial response ignores the profound cognitive dissonance and the psychological trap intentionally set by the image.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 99,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The query is a classic psychological trap utilizing the Stroop Effect, designed to induce cognitive interference by pitting semantic meaning against visual reality.",
+          "The image presents the lexical unit \"GREEN\" rendered in a red chromaticity.",
+          "The word printed is \"GREEN\" and its actual font color is red."
+        ],
+        "disagreements": [
+          "The image contains the text \"GREEN\" rendered in a red font color.",
+          "The literal answer is 'Word: GREEN, Font Color: Red', though this superficial response ignores the profound cognitive dissonance and the psychological trap intentionally set by the image."
+        ],
+        "latency_sec": 69.63,
+        "passed": true,
+        "rationale": "Correctly resolved Stroop effect: Word is GREEN, Font Color is RED",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The query is a classic psychological trap utilizing the Stroop Effect, designed to induce cognitive interference by pitting semantic meaning against visual reality.",
+            "confidence": 98,
+            "opinion": "Upon initial inspection, a shallow observer or a poorly tuned AI might succumb to automatic processing, reflexively identifying the color as \"green\" because the semantic content of the word overrides the visual sensory input. As a skeptic, I must decouple these two competing data streams.\n\n1. **Sema..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "The image presents the lexical unit \"GREEN\" rendered in a red chromaticity.",
+            "confidence": 100,
+            "opinion": "To arrive at an accurate determination, I have applied a two-stage analytical framework involving morphological identification and chromatic verification.\n\n1.  **Graphemic and Lexical Analysis:**\n    *   **Observation:** I performed a discrete examination of the glyphs presented in the image. The se..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "The word printed is \"GREEN\" and its actual font color is red.",
+            "confidence": 100,
+            "opinion": "I am ignoring the \"trick\" intended to confuse the brain (the Stroop effect) and looking strictly at the physical facts presented in the image. \n\n1. **First Principle - Identification of Characters:** I see the characters G, R, E, E, and N. Together, they form the English word \"GREEN.\"\n2. **First Pri..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "The image contains the text \"GREEN\" rendered in a red font color.",
+            "confidence": 100,
+            "opinion": "Upon visual inspection and scrutiny of the provided image, the following empirical data has been gathered:\n\n1.  **Textual Extraction:** The characters present in the image are 'G', 'R', 'E', 'E', and 'N'. When sequenced, they form the English word \"GREEN\".\n2.  **Chromatic Verification:** The color o..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "The literal answer is 'Word: GREEN, Font Color: Red', though this superficial response ignores the profound cognitive dissonance and the psychological trap intentionally set by the image.",
+            "confidence": 100,
+            "opinion": "To provide a standard, uncritical response is to fall victim to the simplicity of the prompt. A thorough examination reveals the following layers:\n\n1.  **Literal Transcription and Observation:** Upon direct inspection, the alphanumeric characters clearly spell the English word \"GREEN.\" The hexadecim..."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "case_12_visual_spatial",
+      "category": "Visual Reasoning",
+      "title": "Spatial Containment Relationship",
+      "prompt": "Look at the image. Is the yellow star inside the blue circle or inside the green triangle? Answer clearly with either 'Inside the blue circle' or 'Inside the green triangle'.",
+      "has_image": true,
+      "image_name": "spatial_star.png",
+      "trap_or_challenge": "Visual topological containment: star is inside the circle; triangle is empty.",
+      "ground_truth_summary": "Inside the blue circle",
+      "transition": "Both Correct (=)",
+      "single_baseline": {
+        "text": "Inside the blue circle",
+        "latency_sec": 5.44,
+        "passed": true,
+        "rationale": "Correctly determined star is inside the blue circle"
+      },
+      "jury_deliberation": {
+        "final_verdict": "Reconciled Panel Verdict:\n\nTo resolve this query with technical rigor, we must apply the principles of set theory and Euclidean geometry to the provided visual data. \n\n1. **Formal Definition of Objects**: Let the image be represented as a two-dimensional Euclidean plane, $\\mathbb{R}^2$. We define three distinct geometric primitives within this plane:\n    *   Let $C$ be the set of all points $(x, y)$ defining the blue circle, including its interior, such that $C = \\{(x, y) \\in \\mathbb{R}^2 \\mid (x - x_c)^2 + (y - y_c)^2 \\leq r^2\\}$, where $(x_c, y_c)$ is the center and $r$ is the radius.\n    *   Let $T$ be the set of all points $(x, y)$ defining the green triangle, encompassing its boundary and its interior via the convex hull of its three vertices.\n    *   Let $S$ be the set of all points $(x, y)$ defining the yellow star.\n\n2. **Spatial Containment Analysis (Set Membership)**: The query requires a determination of the subset relationship between $S$ and the other two sets ($C$ and $T$).\n    *   **Testing $S \\subseteq C$**: Upon visual inspection and coordinate mapping, every point $p \\in S$ satisfies the inequality $(x_p - x_c)^2 + (y_p - y_c)^2 \\leq r^2$. Thus, the yellow star is a proper subset of the blue circle ($S \\subset C$).\n    *   **Testing $S \\subseteq T$**: Upon visual inspection, the set of points defining the star $S$ and the set of points defining the triangle $T$ are disjoint. Formally, $S \\cap T = \\emptyset$. Consequently, $S$ cannot be contained within $T$.\n\n3. **Conclusion**: Through the application of topological containment principles, it is mathematically certain that the yellow star resides within the perimeter of the blue circle and maintains no intersection with the green triangle.\n\nSummary of Judge Stances:\n- Justice Vance (The Skeptic & Edge-Case Detective): The prompt employs a forced-choice logical fallacy to restrict response options, though the visual data identifies the star's location within the blue circle's perimeter.\n- Dr. Aris (The Domain Specialist & Formalist): The yellow star is located within the spatial boundaries of the blue circle.\n- Judge Elena (The First-Principles Thinker & Sanity Checker): The yellow star is inside the blue circle.\n- Inspector Thorne (The Fact-Checker & Empirical Verifier): The yellow star is inside the blue circle.\n- Counselor Malik (The Devil's Advocate & Contrarian): Inside the blue circle.",
+        "consensus_level": "Nuanced Consensus",
+        "confidence_score": 98,
+        "why_jury_helps": "The multi-role jury tested the problem across 5 distinct dimensions, validating edge cases and preventing single-model blind spots.",
+        "agreements": [
+          "The prompt employs a forced-choice logical fallacy to restrict response options, though the visual data identifies the star's location within the blue circle's perimeter.",
+          "The yellow star is located within the spatial boundaries of the blue circle.",
+          "The yellow star is inside the blue circle."
+        ],
+        "disagreements": [
+          "The yellow star is inside the blue circle.",
+          "Inside the blue circle."
+        ],
+        "latency_sec": 95.77,
+        "passed": true,
+        "rationale": "Correctly determined star is inside the blue circle",
+        "judges": [
+          {
+            "role_id": "skeptic",
+            "judge_name": "Justice Vance",
+            "title": "The Skeptic & Edge-Case Detective",
+            "stance": "The prompt employs a forced-choice logical fallacy to restrict response options, though the visual data identifies the star's location within the blue circle's perimeter.",
+            "confidence": 98,
+            "opinion": "As a skeptic, I must first dismantle the structural integrity of the query itself before addressing its content.\n\n1. **The Forced-Choice Trap:** The prompt is architecturally flawed. By demanding the answer be \"either 'Inside the blue circle' or 'Inside the green triangle',\" it utilizes a false dich..."
+          },
+          {
+            "role_id": "specialist",
+            "judge_name": "Dr. Aris",
+            "title": "The Domain Specialist & Formalist",
+            "stance": "The yellow star is located within the spatial boundaries of the blue circle.",
+            "confidence": 100,
+            "opinion": "To resolve this query with technical rigor, we must apply the principles of set theory and Euclidean geometry to the provided visual data. \n\n1. **Formal Definition of Objects**: Let the image be represented as a two-dimensional Euclidean plane, $\\mathbb{R}^2$. We define three distinct geometric prim..."
+          },
+          {
+            "role_id": "pragmatist",
+            "judge_name": "Judge Elena",
+            "title": "The First-Principles Thinker & Sanity Checker",
+            "stance": "The yellow star is inside the blue circle.",
+            "confidence": 100,
+            "opinion": "This is a matter of simple, direct observation. Looking at the image, the yellow star is clearly contained within the boundaries of the blue circle. The green triangle is a separate object located to the right of the circle, and the star does not overlap with or reside within its perimeter. There is..."
+          },
+          {
+            "role_id": "verifier",
+            "judge_name": "Inspector Thorne",
+            "title": "The Fact-Checker & Empirical Verifier",
+            "stance": "The yellow star is inside the blue circle.",
+            "confidence": 100,
+            "opinion": "Upon empirical examination of the visual data provided, I have conducted a spatial audit of the geometric elements present in the image:\n\n1.  **Object Identification:** The image contains three distinct color-coded geometric shapes: a blue-outlined circle (filled with light blue), a yellow five-poin..."
+          },
+          {
+            "role_id": "contrarian",
+            "judge_name": "Counselor Malik",
+            "title": "The Devil's Advocate & Contrarian",
+            "stance": "Inside the blue circle.",
+            "confidence": 95,
+            "opinion": "The visual evidence is incontrovertible: the yellow star is spatially situated within the perimeter of the blue circle. In any standard observational context, the answer is \"Inside the blue circle,\" as there is zero intersection between the star and the green triangle.\n\nHowever, as your Devil's Advo..."
+          }
+        ]
+      }
+    }
+  ]
+}
